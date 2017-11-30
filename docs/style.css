@@ -1,0 +1,143 @@
+/* default */
+
+html, head, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: calibri, helvetica, arial, sans-serif;
+}
+
+/* custom */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --off-color: #211;
+  --on-color: #f35;
+  --clock-width: 400px;
+  --clock-height: 100px;
+  --digit-width: 50px;
+}
+
+body {
+  background-color: black;
+}
+
+.clock {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  width: var(--clock-width);
+  height: var(--clock-height);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.clock.shadow {
+  transform: scaleY(-0.5);
+  transform-origin: bottom;
+  background: rgba(73, 54, 84, 0.5);
+  opacity: 0.5;
+  box-shadow: 0px -34px 85px 64px rgba(100, 73, 143, 0.8);
+}
+
+.digit {
+  position: relative;
+  width: var(--digit-width);
+  height: var(--clock-height);
+}
+
+.digit-part {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, transparent 27%, var(--off-color) 27%), linear-gradient(135deg, transparent 27%, var(--off-color) 27%), linear-gradient(225deg, transparent 27%, var(--off-color) 27%), linear-gradient(315deg, transparent 27%, var(--off-color) 27%);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.digit-part.d1 {
+  top: 2%;
+  bottom: 86%;
+  left: 6%;
+  right: 6%;
+}
+
+.digit-part.d2 {
+  right: 80%;
+  bottom: 50%;
+  top: 8%;
+}
+
+.digit-part.d3 {
+  left: 80%;
+  bottom: 50%;
+  top: 8%;
+}
+
+.digit-part.d4 {
+  top: 43%;
+  bottom: 43%;
+  left: 8%;
+  right: 8%;
+}
+
+.digit-part.d5 {
+  right: 80%;
+  top: 50%;
+  bottom: 8%;
+}
+
+.digit-part.d6 {
+  left: 80%;
+  top: 50%;
+  bottom: 8%;
+}
+
+.digit-part.d7 {
+  top: 86%;
+  bottom: 2%;
+  left: 6%;
+  right: 6%;
+}
+
+.digit-part.on {
+  background: linear-gradient(45deg, transparent 25%, var(--on-color) 27%), linear-gradient(135deg, transparent 27%, var(--on-color) 27%), linear-gradient(225deg, transparent 27%, var(--on-color) 27%), linear-gradient(315deg, transparent 27%, var(--on-color) 27%);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+}
+
+.colon {
+  width: 20px;
+  position: relative;
+}
+
+.colon-dot {
+  background-color: var(--on-color);
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: calc(50% - 5px);
+}
+
+.c1 {
+  top: 20%;
+}
+
+.c2 {
+  bottom: 20%;
+}
