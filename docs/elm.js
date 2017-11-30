@@ -11082,13 +11082,21 @@ var _user$project$Main$view = function (model) {
 		{
 			ctor: '::',
 			_0: A2(
-				_elm_lang$html$Html$div,
+				_elm_lang$html$Html$a,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('clock'),
-					_1: {ctor: '[]'}
+					_0: _elm_lang$html$Html_Attributes$href('https://github.com/jinjor/elm-digital-clock'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('link'),
+						_1: {ctor: '[]'}
+					}
 				},
-				children),
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('GitHub'),
+					_1: {ctor: '[]'}
+				}),
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -11096,14 +11104,25 @@ var _user$project$Main$view = function (model) {
 					{
 						ctor: '::',
 						_0: _elm_lang$html$Html_Attributes$class('clock'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('shadow'),
-							_1: {ctor: '[]'}
-						}
+						_1: {ctor: '[]'}
 					},
 					children),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('clock'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('shadow'),
+								_1: {ctor: '[]'}
+							}
+						},
+						children),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };

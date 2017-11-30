@@ -88,7 +88,8 @@ view model =
             ]
     in
     div []
-        [ div [ class "clock" ] children
+        [ a [ href "https://github.com/jinjor/elm-digital-clock", class "link" ] [ text "GitHub" ]
+        , div [ class "clock" ] children
         , div [ class "clock", class "shadow" ] children
         ]
 

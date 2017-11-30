@@ -27,6 +27,14 @@ body {
   background-color: black;
 }
 
+.link {
+  color: #555;
+  text-decoration: none;
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
 .clock {
   display: flex;
   justify-content: space-around;
